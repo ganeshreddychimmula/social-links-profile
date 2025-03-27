@@ -84,9 +84,9 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Continued development
 
-How to pick Correct Semantical Elements?
+**How to pick Correct Semantical Elements?**
 
-**Semantic HTML Structure **
+__Semantic HTML Structure__
 
 Original Implementation
 Used semantic elements like `<figure>` for the avatar, `<section>` for name/location, and `<nav>` for social links.
