@@ -88,23 +88,15 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 __Semantic HTML Structure__
 
-Original Implementation
 Used semantic elements like `<figure>` for the avatar, `<section>` for name/location, and `<nav>` for social links.
-
-Key Learnings & Improvements
-
 - **Add `alt` to `<img>`**  
   Improves accessibility for screen readers.
-
 - **Wrap everything in an `<article>`**  
   The profile card is a self-contained piece of content.
-
 - **Use `<header>` instead of `<section>`**  
-  Ideal for grouping name and location as introductory content.
-
+  Ideal for grouping name and location as introductory content.\
 - **Replace `<button>`s in `<nav>` with `<ul>` and `<a>` links**  
   Navigation is a list of links, not actions — helps with semantics and screen reader navigation.
-
 - **Maintain proper heading levels**  
   Avoid skipping levels like `<h2>` → `<h4>` without nesting.
 
