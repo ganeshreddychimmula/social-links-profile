@@ -2,7 +2,7 @@
     font-family: "my-font";
     src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype-variations"),
      url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype") tech("variations");
-    font-weight: 400 700;
+    font-weight: 400 600;
 }
 @font-face {
     font-family: "my-font";
@@ -13,7 +13,7 @@
 @font-face {
     font-family: "my-font";
     src: url("../assets/fonts/static/Inter-Bold.ttf") format("truetype");
-    font-weight: 700;
+    font-weight: 600;
 }
 
 *,::after,::before {
@@ -64,7 +64,6 @@ main{
 }
 
 .userPicContainer{
-    width: 100%;
     text-align: center;;
 }
 
@@ -75,7 +74,6 @@ main{
 }
 
 .userInfoContainer{
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,17 +82,35 @@ main{
 }
 
 .userName{
-  font-size: 24px;
- font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .userLocation{
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--green);
 }
 
 .userBio{
     font-size: 14px;
     text-align: center;
+}
+
+.navigationList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 16px;
+}
+
+.navItem{
+    padding: 12px;
+    background-color: var(--light-gray);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+
 }
