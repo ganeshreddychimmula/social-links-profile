@@ -93,3 +93,8 @@ main{
     font-weight: 700;
     color: var(--green);
 }
+
+.userBio{
+    font-size: 14px;
+    text-align: center;
+}
