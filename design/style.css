@@ -124,6 +124,8 @@ a{
 .navItem:hover{
     background-color: var(--green);
     color: var(--light-gray);
+    cursor: url("../assets/images/hover-pointer.png"), auto;
+
 }
 
 a:hover{
