@@ -54,7 +54,22 @@ main{
     height: min-content;
     margin: auto;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 24px;
     border-radius: 12px;
     background-color: var(--gray);
 }
 
+.userPicContainer{
+    width: 100%;
+    height: min-content;
+    text-align: center;
+}
+
+.userPic{
+    height: 88px;
+    width: 88px;
+    border-radius: 999px;
+}
