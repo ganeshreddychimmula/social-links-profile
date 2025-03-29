@@ -112,5 +112,18 @@ main{
     font-weight: 600;
     text-align: center;
     border-radius: 8px;
+}
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navItem:hover{
+    background-color: var(--green);
+    color: var(--light-gray);
+}
+
+a:hover{
+    cursor: url("../assets/images/hover-pointer.png"), auto;
 }
