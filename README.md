@@ -11,12 +11,10 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,20 +26,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+[Visit the site here]()
+![Scrrenshot](./design/images/image.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/ganeshreddychimmula/social-links-profile)
+- Live Site URL: [Live site](https://ganeshreddychimmula.github.io/social-links-profile/)
 
 ## My process
 
@@ -52,40 +44,15 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
+Recap over some of your major learnings while working through this project.
 To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
 **How to pick Correct Semantical Elements?**
-
 __Semantic HTML Structure__
 
 Used semantic elements like `<figure>` for the avatar, `<section>` for name/location, and `<nav>` for social links.
@@ -102,21 +69,109 @@ Used semantic elements like `<figure>` for the avatar, `<section>` for name/loca
 
 These changes enhance the **semantic clarity**, **accessibility**, and **maintainability** of the HTML structure.
 
+**Custom fonts**
+When you have multiple variations of the same font family with different weights and styles, you should use multiple @font-face declarations with the same font-family name but different font-weight and font-style properties. Here's how to properly set this up:
+```css
+@font-face {
+  font-family: 'my-custom-font';
+  src: url('path/to/variable-font.woff2') format('woff2-variations');
+  font-weight: 100 900; /* Specify the weight range supported by the variable font */
+  font-style: normal;
+  font-display: swap; /* Optional but recommended for performance */
+}
+
+/* Regular/Normal weight */
+@font-face {
+  font-family: 'my-custom-font';
+  src: url('path/to/font-regular.woff2') format('woff2');
+  font-weight: 400; /* or 'normal' */
+  font-style: normal;
+}
+
+/* Bold weight */
+@font-face {
+  font-family: 'my-custom-font';
+  src: url('path/to/font-bold.woff2') format('woff2');
+  font-weight: 700; /* or 'bold' */
+  font-style: normal;
+}
+
+/* Italic style */
+@font-face {
+  font-family: 'my-custom-font';
+  src: url('path/to/font-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+```
+For different font sizes, you don't need separate @font-face declarations, as font size is controlled separately using the font-size property:
+```css
+h1 {
+  font-family: 'my-custom-font', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem; /* Large size */
+}
+
+p {
+  font-family: 'my-custom-font', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem; /* Medium size */
+}
+
+.small-text {
+  font-family: 'my-custom-font', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem; /* Small size */
+}
+```
+**Fall back Fonts**
+
+This is an excellent fallback stack for your Inter Variable font. Let me break down why this is a good choice:
+
+```css
+font-family: 'my-font', /* Your Inter Variable font */
+             system-ui, 
+             -apple-system, BlinkMacSystemFont,
+             'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+             'Open Sans', 'Helvetica Neue', 
+             sans-serif;
+```
+
+This stack provides comprehensive coverage:
+
+1. **system-ui**: Modern approach that automatically selects the native UI font of the user's operating system
+
+2. **-apple-system, BlinkMacSystemFont**: Target San Francisco on Apple devices
+
+3. **Segoe UI**: Windows default UI font
+
+4. **Roboto**: Android's system font 
+
+5. **Oxygen, Ubuntu, Cantarell**: Common Linux distribution fonts
+
+6. **Open Sans**: Very popular web font with good readability similar to Inter
+
+7. **Helvetica Neue**: Classic choice for Apple users on older systems
+
+8. **sans-serif**: Final generic fallback
+
+This stack is particularly well-suited for Inter because it prioritizes modern UI system fonts that share Inter's characteristics: good readability, neutral design, and optimization for screen display. The progression moves from most similar to Inter toward more universally available options.
+
+This is a robust, comprehensive approach that will maintain a consistent user experience across virtually all devices and platforms.
+
+**Don't forget to Use flew grow,shrink, basis**
+
+**Remove bullet points of list**
+liststyle:none
+
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Semantic structure](https://www.example.com)
+- [Git sheet](https://cs.fyi/guide/git-cheatsheet)
 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@ganeshreddychimmula](https://www.frontendmentor.io/profile/@ganeshreddychimmula)
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

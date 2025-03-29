@@ -56,3 +56,39 @@ When the design looks like buttons but the elements are actually links (navigati
 Use <header> when you're grouping introductory content (like a heading, subheading, or metadata) — especially at the top of a page, article, or section.
 
 Use <section> when you're creating a thematic chunk of content that forms part of the document structure and includes its own heading.
+
+
+## How to include emojis in git commit messages
+
+Windows + .
+
+## How to approach to implement style or fix structure
+
+Start from higher layers and progress towards nested layers
+
+## Shoukld I use classes or elemnts for styling
+✅ Use classes for styling in CSS.
+❌ Avoid relying only on HTML elements for complex or large-scale styling.
+Sure! Here's a short, code-free version for your notes:
+
+**Use classes to style CSS** because they are reusable, flexible, and easier to maintain. Element selectors apply styles globally and can cause conflicts in larger projects. Use element selectors only for base or reset styles. Classes give you better control and scalability.
+
+Use Element Selectors	              Use Classes
+For base/default styles     	 For reusable, modular, scalable styles
+When you're sure it's global	 When you want control and flexibility
+Small, simple projects	         Any real-world application
+
+**How to centyer the card horizontally and vertically**
+-if jyst horizntally, margin:auto
+-if vertically too, make parent container grid
+
+## i feel like using flex a lot, is it a overkill?
+⚖️ Not bad practice, but not always necessary. Use display: flex when it gives you a clear benefit.
+✅ When display: flex makes sense for vertical lists:
+You want to control spacing, alignment, or reordering of list items.
+You need equal height children or more layout flexibility.
+You’re building a custom-styled list, like a sidebar menu or vertical nav.
+
+## how to make the entire button clickable
+just make <a> a block element
+
