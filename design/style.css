@@ -112,6 +112,7 @@ main{
     font-weight: 600;
     text-align: center;
     border-radius: 8px;
+    cursor: url("../assets/images/hover-pointer.png"), auto;
 }
 
 a{
@@ -126,4 +127,10 @@ a{
 
 a:hover{
     cursor: url("../assets/images/hover-pointer.png"), auto;
+}
+
+@media screen and (max-width: 400px) {
+    .card{
+        width: 327px; 
+    }
 }
