@@ -56,6 +56,7 @@ main{
     padding: 40px;
     display: flex;
     flex-direction: column;
+    flex: 1 1 0;
     justify-content: space-evenly;
     gap: 24px;
     border-radius: 12px;
@@ -64,12 +65,31 @@ main{
 
 .userPicContainer{
     width: 100%;
-    height: min-content;
-    text-align: center;
+    text-align: center;;
 }
 
 .userPic{
     height: 88px;
     width: 88px;
     border-radius: 999px;
+}
+
+.userInfoContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 0;
+    gap: 4px;
+}
+
+.userName{
+  font-size: 24px;
+ font-weight: 700;
+}
+
+.userLocation{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--green);
 }
